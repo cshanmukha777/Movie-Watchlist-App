@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎬 Movie Watchlist App
 
 ## 📌 Project Overview
@@ -37,3 +38,6 @@ OMDB API - https://www.omdbapi.com/
 * Movie details page
 * Filter by year or type
 * Random movie suggestion feature
+=======
+# Movie-Watchlist-App
+>>>>>>> c7759a4a8f6b4f0d97ac730dee33924c5e9f8191
