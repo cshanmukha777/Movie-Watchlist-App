@@ -10,30 +10,24 @@ The goal of this project is to help users easily discover movies and keep track 
 
 ## 🌐 API Used
 
-OMDB API - https://www.omdbapi.com/
+OMDb API  
+https://www.omdbapi.com/
 
 ## 🚀 Features
 
-* Search movies by name
-* Display movie results with posters
-* Add/remove movies to watchlist
-* Store watchlist using localStorage
+- 🔍 Search movies by name  
+- 🖼 Display movie results with posters  
+- ⭐ Add movies to watchlist  
+- ❌ Remove movies from watchlist  
+- 💾 Store watchlist using localStorage  
+- ⚡ Fast and lightweight (No frameworks)
 
 ## 🛠 Technologies Used
 
-* React.js
-* JavaScript (ES6)
-* CSS
-* Fetch API
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla JS / ES6)  
+- Fetch API  
+- LocalStorage  
 
-## ▶️ Setup Instructions
 
-1. Clone the repository
-2. Run `npm install`
-3. Run `npm run dev`
-
-## 📅 Future Improvements
-
-* Movie details page
-* Filter by year or type
-* Random movie suggestion feature
