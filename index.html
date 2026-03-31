@@ -7,6 +7,26 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+    
+    <h1>🎬 Movie Watchlist</h1>
+
+    <div class="search-box">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search movies..."
+        />
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="loading" class="loading hidden">
+        Loading movies...
+    </div>
+
+    <div id="movies" class="movies"></div>
+
+</div>
     <script src="./script.js"></script>
 </body>
 </html>
