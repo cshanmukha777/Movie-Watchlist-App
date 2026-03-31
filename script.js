@@ -2,7 +2,7 @@ const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
 const moviesContainer = document.getElementById("movies");
 const loading = document.getElementById("loading");
-
+const API_KEY = "7a53f7e7"
 
 searchBtn.addEventListener("click", searchMovies);
 
@@ -62,8 +62,7 @@ alt="${movie.Title}"
 
 </div>
 
-`)
-.join("");
+`).join("");
 
 }
 function showLoading() {
