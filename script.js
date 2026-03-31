@@ -66,3 +66,19 @@ alt="${movie.Title}"
 .join("");
 
 }
+function showLoading() {
+loading.classList.remove("hidden");
+moviesContainer.innerHTML = "";
+}
+
+function hideLoading() {
+loading.classList.add("hidden");
+}
+
+function showEmptyState(message) {
+moviesContainer.innerHTML = `
+<div class="empty">
+${message}
+</div>
+`;
+}
