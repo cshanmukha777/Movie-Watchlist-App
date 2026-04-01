@@ -143,3 +143,15 @@ align-items:center;
 .no-image .movie-info {
 padding:0;
 }
+.no-image h3 {
+font-size:28px;
+font-weight:600;
+background: linear-gradient(90deg,#22c55e,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.no-image p {
+margin-top:10px;
+color:#94a3b8;
+}
