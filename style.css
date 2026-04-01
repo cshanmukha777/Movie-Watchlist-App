@@ -130,3 +130,16 @@ width:100%;
 height:260px;
 object-fit:cover;
 }
+.movie-info {
+padding:20px;
+text-align:center;
+}
+
+.no-image {
+justify-content:center;
+align-items:center;
+}
+
+.no-image .movie-info {
+padding:0;
+}
