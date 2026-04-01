@@ -60,3 +60,15 @@ font-size: 20px;
 .hidden {
 display: none;
 }
+.movie-card {
+  background: linear-gradient(145deg, #0f172a, #020617);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.3s ease;
+}
