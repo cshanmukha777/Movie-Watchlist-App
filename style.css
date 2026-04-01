@@ -87,3 +87,16 @@ display: none;
 .movie-card img:not([src]) {
   display: none;
 }
+.movie-info {
+  text-align: center;
+  padding: 20px;
+}
+
+.movie-info h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  background: linear-gradient(90deg,#22c55e,#06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
