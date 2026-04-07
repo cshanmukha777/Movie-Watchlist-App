@@ -127,3 +127,45 @@ Watchlist
 `).join("");
 
 }
+function addWatchlist(id){
+
+const movie = moviesData.find(m => m.imdbID === id);
+
+if(!watchlist.some(m => m.imdbID === id)){
+watchlist.push(movie);
+localStorage.setItem("watchlist", JSON.stringify(watchlist));
+}
+
+alert("Added to Watchlist");
+
+}
+
+function addFavorite(id){
+
+const movie = moviesData.find(m => m.imdbID === id);
+
+if(!favorites.some(m => m.imdbID === id)){
+favorites.push(movie);
+localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+alert("Added to Favorites");
+
+}
+
+function showLoading() {
+loading.classList.remove("hidden");
+moviesContainer.innerHTML = "";
+}
+
+function hideLoading() {
+loading.classList.add("hidden");
+}
+
+function showEmptyState(message) {
+moviesContainer.innerHTML = `
+<div class="empty">
+${message}
+</div>
+`;
+}
