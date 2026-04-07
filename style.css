@@ -196,3 +196,59 @@ gap: 10px;
 .primary-btn {
 width: 100%;
 }
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.6);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+}
+
+.modal.hidden {
+display: none;
+}
+
+.modal-card {
+position: relative;
+width: min(900px, 100%);
+background: var(--panel);
+color: var(--text);
+border-radius: 20px;
+padding: 20px;
+box-shadow: var(--shadow);
+border: 1px solid var(--border);
+}
+
+.close-btn {
+position: absolute;
+top: 12px;
+right: 12px;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: var(--bg);
+color: var(--text);
+font-size: 1.4rem;
+}
+
+.modal-grid {
+display: grid;
+grid-template-columns: 240px 1fr;
+gap: 20px;
+align-items: start;
+}
+
+.modal-grid img {
+width: 100%;
+border-radius: 16px;
+}
+
+.plot {
+color: var(--muted);
+line-height: 1.6;
+}
