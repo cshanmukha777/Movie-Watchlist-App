@@ -80,3 +80,31 @@ margin-bottom: 12px;
 .filters {
 grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+input,
+select,
+button {
+font: inherit;
+}
+
+input,
+select {
+width: 100%;
+padding: 14px 16px;
+border-radius: 14px;
+border: 1px solid var(--border);
+background: var(--bg);
+color: var(--text);
+outline: none;
+}
+
+button {
+border: none;
+border-radius: 14px;
+padding: 14px 16px;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+button:hover {
+transform: translateY(-1px);
+}
