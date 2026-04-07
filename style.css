@@ -108,3 +108,20 @@ transition: 0.2s ease;
 button:hover {
 transform: translateY(-1px);
 }
+.search-box button,
+.primary-btn {
+background: var(--primary);
+color: white;
+}
+
+.search-box button:hover,
+.primary-btn:hover {
+background: var(--primary-hover);
+}
+
+.ghost-btn,
+.icon-btn {
+background: transparent;
+border: 1px solid var(--border);
+color: var(--text);
+}
