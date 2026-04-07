@@ -34,3 +34,30 @@ color: var(--text);
 width: min(1180px, calc(100% - 32px));
 margin: 24px auto 40px;
 }
+.topbar,
+.controls,
+.section {
+background: var(--panel);
+border: 1px solid var(--border);
+border-radius: 20px;
+box-shadow: var(--shadow);
+}
+
+.topbar {
+display: flex;
+justify-content: space-between;
+gap: 16px;
+align-items: center;
+padding: 20px;
+margin-bottom: 18px;
+}
+
+.topbar h1 {
+margin: 0 0 6px;
+font-size: 2rem;
+}
+
+.topbar p {
+margin: 0;
+color: var(--muted);
+}
