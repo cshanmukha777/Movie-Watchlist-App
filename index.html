@@ -1,35 +1,94 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Watchlist</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-    
-    <h1>🎬 Movie Watchlist</h1>
 
-    <div class="search-box">
-        <input 
-            type="text" 
-            id="searchInput" 
-            placeholder="Search movies..."
-        />
-        <button id="searchBtn">Search</button>
-    </div>
+<div class="app">
 
-    <div id="loading" class="loading hidden">
-        Loading movies...
-    </div>
+<header class="topbar">
+<div>
+<h1>Movie Watchlist</h1>
+<p>Search, filter, sort, and save movies.</p>
+</div>
 
-    <div id="movies" class="movies"></div>
+<button id="themeToggle" class="ghost-btn">
+🌙 Dark Mode
+</button>
+</header>
+
+<section class="controls">
+
+<form id="searchForm" class="search-box">
+
+<input 
+type="text" 
+id="searchInput" 
+placeholder="Search movies..." 
+autocomplete="off"
+/>
+
+<button type="submit">
+Search
+</button>
+
+</form>
+
+<div class="filters">
+
+<input 
+type="text" 
+id="keywordFilter" 
+placeholder="Filter current results..." 
+autocomplete="off"
+/>
+
+<select id="sortBy">
+<option value="title-asc">Title A → Z</option>
+<option value="title-desc">Title Z → A</option>
+<option value="year-asc">Year Old → New</option>
+<option value="year-desc">Year New → Old</option>
+</select>
 
 </div>
 
-<script src="./script.js"></script>
-</body>
+</section>
 
+<section class="section">
+
+<div class="section-head">
+<h2>Results</h2>
+<span id="resultCount">0 results</span>
+</div>
+
+<div id="loading" class="loading hidden">
+Loading movies...
+</div>
+
+<div id="movies" class="movies"></div>
+
+</section>
+
+<section class="section">
+
+<div class="section-head">
+<h2>Watchlist</h2>
+<span id="watchlistCount">0 saved</span>
+</div>
+
+<div id="watchlist" class="movies"></div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
