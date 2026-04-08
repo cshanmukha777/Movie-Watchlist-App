@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Movie Watchlist</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="container">
+    
+    <h1>🎬 Movie Watchlist</h1>
 
-<h1>🎬 Movie Watchlist</h1>
+    <div class="search-box">
+        <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search movies..."
+        />
+        <button id="searchBtn">Search</button>
+    </div>
 
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Search movies...">
-<button id="searchBtn">Search</button>
+    <div id="loading" class="loading hidden">
+        Loading movies...
+    </div>
+
+    <div id="movies" class="movies"></div>
+
 </div>
 
-<div class="controls">
-<input type="text" id="keywordFilter" placeholder="Filter movies...">
-
-<select id="sortBy">
-<option value="">Sort By</option>
-<option value="title-asc">Title A-Z</option>
-<option value="title-desc">Title Z-A</option>
-<option value="year-asc">Year Old-New</option>
-<option value="year-desc">Year New-Old</option>
-</select>
-</div>
-
-<div id="loading" class="hidden">Loading...</div>
-
-<div id="movies"></div>
-
-<script src="script.js"></script>
-
+<script src="./script.js"></script>
 </body>
+
 </html>

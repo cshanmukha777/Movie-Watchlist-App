@@ -96,18 +96,14 @@ function displayMovies(movies) {
 moviesContainer.innerHTML = movies
 .map(movie => `
 <div class="movie-card">
-<img src="${movie.Poster}" alt="${movie.Title}">
+<img 
+src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450"}" 
+alt="${movie.Title}"
+/>
 
 <h3>${movie.Title}</h3>
 <p>${movie.Year}</p>
-
-<button onclick="addWatchlist('${movie.imdbID}')">
-➕ Watchlist
-</button>
-
-<button onclick="addFavorite('${movie.imdbID}')">
-❤ Favorite
-</button>
+</div>
 
 </div>
 `).join("");
@@ -137,7 +133,6 @@ localStorage.setItem("favorites", JSON.stringify(favorites));
 alert("Added to Favorites");
 
 }
-
 function showLoading() {
 loading.classList.remove("hidden");
 moviesContainer.innerHTML = "";

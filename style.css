@@ -212,73 +212,73 @@ z-index: 1000;
 .modal.hidden {
 display: none;
 }
-
-.modal-card {
-position: relative;
-width: min(900px, 100%);
-background: var(--panel);
-color: var(--text);
-border-radius: 20px;
-padding: 20px;
-box-shadow: var(--shadow);
-border: 1px solid var(--border);
+.movie-info {
+  text-align: center;
+  padding: 20px;
 }
 
-.close-btn {
-position: absolute;
-top: 12px;
-right: 12px;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background: var(--bg);
-color: var(--text);
-font-size: 1.4rem;
+.movie-info h3 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  background: linear-gradient(90deg,#22c55e,#06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.movie-info p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #94a3b8;
 }
 
-.modal-grid {
-display: grid;
-grid-template-columns: 240px 1fr;
-gap: 20px;
-align-items: start;
+/* When no image */
+.movie-card.no-image {
+  justify-content: center;
+  align-items: center;
 }
 
-.modal-grid img {
-width: 100%;
-border-radius: 16px;
+.movie-card.no-image .movie-info h3 {
+  font-size: 26px;
+}
+.movie-card {
+background: linear-gradient(145deg,#020617,#020617);
+border-radius:20px;
+height:420px;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+position:relative;
 }
 
-.plot {
-color: var(--muted);
-line-height: 1.6;
+.movie-card img {
+width:100%;
+height:260px;
+object-fit:cover;
 }
-@media (max-width: 760px) {
-
-.topbar,
-.search-box,
-.filters,
-.modal-grid {
-grid-template-columns: 1fr;
-display: grid;
-}
-
-.topbar {
-justify-content: stretch;
-}
-
-}
-.hidden{
-display:none;
-}
-.movie-card{
-border:1px solid #ddd;
-padding:15px;
-margin:10px;
-width:200px;
-display:inline-block;
+.movie-info {
+padding:20px;
 text-align:center;
 }
 
-.movie-card img{
-width:100%;
+.no-image {
+justify-content:center;
+align-items:center;
+}
+
+.no-image .movie-info {
+padding:0;
+}
+.no-image h3 {
+font-size:28px;
+font-weight:600;
+background: linear-gradient(90deg,#22c55e,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.no-image p {
+margin-top:10px;
+color:#94a3b8;
+}
+
 }
