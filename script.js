@@ -93,25 +93,16 @@ displayMovies(filteredMovies);
 }
 
 function displayMovies(movies) {
-
 moviesContainer.innerHTML = movies
 .map(movie => `
-
 <div class="movie-card">
+<img src="${movie.Poster}" alt="${movie.Title}">
 
-<img 
-src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450"}" 
-alt="${movie.Title}"
-/>
-
-<div class="movie-info">
 <h3>${movie.Title}</h3>
 <p>${movie.Year}</p>
 
-<div class="movie-actions">
-
 <button onclick="addWatchlist('${movie.imdbID}')">
-Watchlist
+➕ Watchlist
 </button>
 
 <button onclick="addFavorite('${movie.imdbID}')">
@@ -119,13 +110,7 @@ Watchlist
 </button>
 
 </div>
-
-</div>
-
-</div>
-
 `).join("");
-
 }
 function addWatchlist(id){
 
