@@ -7,10 +7,10 @@
 --primary: #2563eb;
 --primary-hover: #1d4ed8;
 --danger: #ef4444;
+--favorite: #f59e0b;
 --shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* FIXED DARK MODE */
 html[data-theme="dark"] {
 --bg: #0f172a;
 --panel: #111827;
@@ -20,6 +20,7 @@ html[data-theme="dark"] {
 --primary: #60a5fa;
 --primary-hover: #3b82f6;
 --danger: #ef4444;
+--favorite: #f59e0b;
 --shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
@@ -39,6 +40,8 @@ width: min(1180px, calc(100% - 32px));
 margin: 24px auto;
 }
 
+/* Header */
+
 .topbar,
 .controls,
 .section {
@@ -51,9 +54,30 @@ box-shadow: var(--shadow);
 .topbar {
 display: flex;
 justify-content: space-between;
+align-items: center;
 padding: 20px;
 margin-bottom: 18px;
 }
+
+/* Medium Dark Mode Button */
+
+.ghost-btn {
+background: transparent;
+border: 1px solid var(--border);
+color: var(--text);
+padding: 8px 14px;
+font-size: 0.9rem;
+border-radius: 10px;
+cursor: pointer;
+width: auto;
+transition: 0.2s ease;
+}
+
+.ghost-btn:hover {
+background: var(--bg);
+}
+
+/* Controls */
 
 .controls {
 padding: 16px;
@@ -87,6 +111,11 @@ border-radius: 10px;
 border: none;
 cursor: pointer;
 font-weight: 500;
+transition: 0.2s ease;
+}
+
+button:hover {
+transform: translateY(-1px);
 }
 
 .search-box button {
@@ -94,11 +123,11 @@ background: var(--primary);
 color: white;
 }
 
-.ghost-btn {
-background: transparent;
-border: 1px solid var(--border);
-color: var(--text);
+.search-box button:hover {
+background: var(--primary-hover);
 }
+
+/* Sections */
 
 .section {
 padding: 18px;
@@ -110,6 +139,12 @@ display: flex;
 justify-content: space-between;
 margin-bottom: 12px;
 }
+
+.section-head span {
+color: var(--muted);
+}
+
+/* Movie Grid */
 
 .movies {
 display: grid;
@@ -143,6 +178,8 @@ margin: 4px 0;
 color: var(--muted);
 }
 
+/* Buttons */
+
 .movie-info button {
 width: 100%;
 margin-top: 6px;
@@ -150,13 +187,24 @@ background: var(--primary);
 color: white;
 }
 
-.movie-info button:nth-child(2){
-background:#f59e0b;
+.movie-info button:hover {
+background: var(--primary-hover);
 }
 
-.movie-info button:last-child{
-background:var(--danger);
+/* Favorite Button */
+
+.movie-info button:nth-child(4){
+background: var(--favorite);
 }
+
+/* Remove Button */
+
+.remove-btn {
+background: var(--danger) !important;
+color: white;
+}
+
+/* States */
 
 .hidden {
 display:none;
@@ -173,7 +221,10 @@ text-align:center;
 color:var(--muted);
 }
 
+/* Responsive */
+
 @media(max-width:768px){
+
 .search-box{
 grid-template-columns:1fr;
 }
@@ -181,4 +232,11 @@ grid-template-columns:1fr;
 .filters{
 grid-template-columns:1fr;
 }
+
+.topbar{
+flex-direction:column;
+gap:10px;
+align-items:flex-start;
+}
+
 }
