@@ -267,3 +267,6 @@ justify-content: stretch;
 }
 
 }
+.hidden{
+display:none;
+}
