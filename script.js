@@ -26,6 +26,7 @@ filterInput.addEventListener("input", renderMovies);
 sortSelect.addEventListener("change", renderMovies);
 
 themeToggle.addEventListener("click", () => {
+
 const currentTheme = document.documentElement.getAttribute("data-theme");
 
 if(currentTheme === "dark"){
@@ -35,6 +36,7 @@ themeToggle.textContent = "🌙 Dark Mode";
 document.documentElement.setAttribute("data-theme", "dark");
 themeToggle.textContent = "☀ Light Mode";
 }
+
 });
 
 async function searchMovies(){
@@ -61,6 +63,7 @@ return;
 }
 
 moviesData = data.Search;
+
 renderMovies();
 
 }catch(error){
@@ -110,37 +113,30 @@ displayMovies(filteredMovies);
 
 }
 
-function displayMovies(movies) {
+function displayMovies(movies){
 
-moviesContainer.innerHTML = movies
-.map(movie => `
+moviesContainer.innerHTML = movies.map(movie => `
 
 <div class="movie-card">
 
-<img 
-src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450"}" 
-alt="${movie.Title}"
+<img
+src="${movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450"}"
 />
 
+<div class="movie-info">
 <h3>${movie.Title}</h3>
 <p>${movie.Year}</p>
 
-<div class="movie-actions">
-
 <button onclick="addWatchlist('${movie.imdbID}')">
-Watchlist
-</button>
-
-<button onclick="addFavorite('${movie.imdbID}')">
-❤ Favorite
+Add to Watchlist
 </button>
 
 </div>
 
 </div>
 
-</div>
 `).join("");
+
 }
 
 function addWatchlist(id){
@@ -148,9 +144,13 @@ function addWatchlist(id){
 const movie = moviesData.find(m => m.imdbID === id);
 
 if(!watchlist.some(m => m.imdbID === id)){
+
 watchlist.push(movie);
+
 localStorage.setItem("watchlist", JSON.stringify(watchlist));
+
 renderWatchlist();
+
 }
 
 }
@@ -176,20 +176,28 @@ watchlistCount.textContent = watchlist.length + " saved";
 
 }
 
-function showLoading() {
+function showLoading(){
+
 loading.classList.remove("hidden");
 moviesContainer.innerHTML = "";
+
 }
 
 function hideLoading(){
+
 loading.classList.add("hidden");
+
 }
 
 function showEmptyState(message){
+
 moviesContainer.innerHTML = `
 
 <div class="empty">
 ${message}
 </div>
 `;
+
 }
+
+renderWatchlist();
