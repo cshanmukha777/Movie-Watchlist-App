@@ -133,7 +133,7 @@ Add to Watchlist
 </button>
 
 <button onclick="toggleFavorite('${movie.imdbID}')">
-${isFavorite ? "❤️ Favorited" : "🤍 Favorite"}
+${isFavorite ? "❤️ Remove Favorite" : "🤍 Add to Favorites"}
 </button>
 
 </div>
