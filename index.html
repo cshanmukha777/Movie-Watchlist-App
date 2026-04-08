@@ -1,142 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Movie Watchlist</title>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app">
+<h1>🎬 Movie Watchlist</h1>
 
-<header class="topbar">
-<div>
-<h1>Movie Watchlist</h1>
-<p>Search, filter, sort, and save movies.</p>
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search movies...">
+<button id="searchBtn">Search</button>
 </div>
 
-<button id="themeToggle" class="ghost-btn">
-🌙 Dark Mode
-</button>
-
-</header>
-
-<section class="controls">
-
-<form id="searchForm" class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search movies..."
-autocomplete="off"
-/>
-
-<button type="submit">
-Search
-</button>
-
-</form>
-
-<div class="filters">
-
-<input
-type="text"
-id="keywordFilter"
-placeholder="Filter current results..."
-autocomplete="off"
-/>
-
-<select id="typeFilter">
-
-<option value="all">All Types</option>
-<option value="movie">Movies</option>
-<option value="series">Series</option>
-<option value="episode">Episodes</option>
-
-</select>
+<div class="controls">
+<input type="text" id="keywordFilter" placeholder="Filter movies...">
 
 <select id="sortBy">
-
-<option value="title-asc">
-Title A → Z
-</option>
-
-<option value="title-desc">
-Title Z → A
-</option>
-
-<option value="year-asc">
-Year Old → New
-</option>
-
-<option value="year-desc">
-Year New → Old
-</option>
-
+<option value="">Sort By</option>
+<option value="title-asc">Title A-Z</option>
+<option value="title-desc">Title Z-A</option>
+<option value="year-asc">Year Old-New</option>
+<option value="year-desc">Year New-Old</option>
 </select>
-
 </div>
 
-</section>
+<div id="loading" class="hidden">Loading...</div>
 
-<section class="section">
-
-<div class="section-head">
-
-<h2>Results</h2>
-
-<span id="resultCount">
-0 results
-</span>
-
-</div>
-
-<div id="loading" class="loading hidden">
-Loading movies...
-</div>
-
-<div id="movies" class="movies"></div>
-
-</section>
-
-<section class="section">
-
-<div class="section-head">
-
-<h2>Watchlist</h2>
-
-<span id="watchlistCount">
-0 saved
-</span>
-
-</div>
-
-<div id="watchlist" class="movies"></div>
-
-</section>
-
-</div>
-
-
-<div id="modal" class="modal hidden">
-
-<div class="modal-card">
-
-<button id="closeModal" class="close-btn">
-×
-</button>
-
-<div id="modalBody"></div>
-
-</div>
-
-</div>
+<div id="movies"></div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
