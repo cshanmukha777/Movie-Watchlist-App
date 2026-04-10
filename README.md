@@ -1,33 +1,140 @@
 # 🎬 Movie Watchlist App
 
-## 📌 Project Overview
+A simple and responsive **Movie Watchlist Application** that allows users to search for movies and save them to their personal watchlist.
+This project uses the **OMDb API** to fetch movie data and **LocalStorage** to store the watchlist.
 
-This is a web application that allows users to search for movies and save them to a personal watchlist.
+---
 
-## 🎯 Purpose
+## 🚀 Live Demo
 
-The goal of this project is to help users easily discover movies and keep track of what they want to watch.
+🔗 https://movie-watchlist-app-orpin.vercel.app/
 
-## 🌐 API Used
+---
 
-OMDb API  
+## 📌 Features
+
+* 🔍 Search Movies by Title
+* 🎬 Fetch Movie Data from OMDb API
+* 🖼️ Display Movie Posters & Details
+* ➕ Add Movies to Watchlist
+* ❌ Remove Movies from Watchlist
+* 💾 LocalStorage Persistence
+* 📱 Responsive UI Design
+* ⚡ Fast & Lightweight
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+
+### APIs & Storage
+
+* OMDb API
+* Fetch API
+* LocalStorage
+
+---
+
+## 📂 Project Structure
+
+```
+Movie-Watchlist-App
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/cshanmukha777/Movie-Watchlist-App.git
+```
+
+### 2. Navigate to Folder
+
+```bash
+cd Movie-Watchlist-App
+```
+
+### 3. Open in Browser
+
+Open `index.html` in your browser
+
+OR use **VS Code Live Server**
+
+---
+
+## 🔑 API Used
+
+### OMDb API
+
 https://www.omdbapi.com/
 
-## 🚀 Features
+---
 
-- 🔍 Search movies by name  
-- 🖼 Display movie results with posters  
-- ⭐ Add movies to watchlist  
-- ❌ Remove movies from watchlist  
-- 💾 Store watchlist using localStorage  
-- ⚡ Fast and lightweight (No frameworks)
+## 🎯 How It Works
 
-## 🛠 Technologies Used
+1. User searches movie name
+2. App fetches data from OMDb API
+3. Movies displayed with poster & details
+4. User clicks **Add to Watchlist**
+5. Movies saved in **LocalStorage**
+6. Watchlist persists after refresh
 
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla JS / ES6)  
-- Fetch API  
-- LocalStorage  
+---
 
+## 💡 Future Improvements
 
+* ⭐ Movie Ratings
+* 📄 Pagination
+* 🎬 Movie Details Page
+* 🔐 User Authentication
+* ☁️ Firebase Integration
+
+---
+
+## 🎓 What I Learned
+
+* Working with APIs
+* Fetch API
+* LocalStorage
+* DOM Manipulation
+* Responsive Design
+* JavaScript ES6
+
+---
+
+## 👨‍💻 Author
+
+**Shanmukha Sai**
+
+GitHub:
+https://github.com/cshanmukha777
+
+---
+
+## ⭐ Support
+
+If you like this project:
+
+* ⭐ Star this repository
+* 🍴 Fork this repository
+* 📢 Share with others
+
+---
+
+## 🔥 Project Status
+
+✅ Completed
+🚀 Ready for Portfolio
